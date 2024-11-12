@@ -1,0 +1,105 @@
+@import "typo";
+@import "couleurs";
+@import "mixin";
+
+
+
+body{
+    background-image: url(../img/fond.webp);
+    > span:first-child{
+        font-family:"myJournalFont";
+        float: right;
+        @include text-black-white;
+    }
+    .clear {
+        clear: both;
+    }
+    #logo{
+        float: left;
+        img {
+        opacity: 50%;
+        width: 10rem;
+        height: auto;
+    }
+    }
+    #title-flex{
+        display: flex;
+        flex-direction: column;
+        padding:0 1rem;
+        h1 {
+            font-family:"myJournalFont";
+            font-size: 4rem;
+            margin: 0;
+            span {
+                opacity: 50%;
+            }
+        }
+        h2 {
+            font-family:"myJournalFont";
+            @include text-black-white;
+            border-radius: 0.5rem;
+        }
+        h4 {
+            opacity: 50%;
+            font-family:"myJournalFont";
+            text-transform: uppercase;
+        }
+    }
+    hr {
+        clear: both;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        margin: 0 20%;
+        gap: 2rem;
+        .card {
+            padding: 0.5rem;
+            background-color: #BDB4B4;
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0,);
+            h3 {
+                @include text-black-white;
+                border-radius: 1rem;
+                text-align: center;
+                font-size: 2rem;
+            }
+            .box {
+                float: left;
+                position: relative;
+                padding: 0.5rem;
+                div {
+                    font-family:"myJournalFont";
+                    text-align: center;
+                    background-color: red;
+                    color: white;
+                }
+            }
+            p {
+                font-family:"myJournalFont";
+                font-size: smaller;
+            }
+            button {
+                @include text-black-white;
+                font-family:"myJournalFont";
+                float: right;
+                border: 0.5rem solid grey;
+            }
+            .clear {
+                clear: both;
+            }
+
+        }
+
+    }
+    hr + span {
+        float: right;
+        @include text-black-white;
+        font-family:"myJournalFont";
+    }
+    
+}
+@media (max-width:560px){
+    body {
+        
+    }
+}

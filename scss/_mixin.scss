@@ -1,0 +1,17 @@
+@mixin text-black-white {
+    background-color: black;
+    color: white;
+    padding:0 1rem ;
+}
+@mixin triangle(  $direction  , $color,  $size: 0.5rem , $position: relative ){
+    color: $color;
+    @if ($direction == "down"){
+        
+    } @else if ($direction == "up"){
+
+    }@else if ($direction == "right"){
+    
+    }@else if ($direction == "left"){
+    
+    }
+}
