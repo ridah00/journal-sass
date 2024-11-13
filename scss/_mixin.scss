@@ -1,17 +1,46 @@
 @mixin text-black-white {
     background-color: black;
     color: white;
-    padding:0 1rem ;
+    padding: 0 1rem;
 }
-@mixin triangle(  $direction  , $color,  $size: 0.5rem , $position: relative ){
-    color: $color;
-    @if ($direction == "down"){
-        
-    } @else if ($direction == "up"){
 
-    }@else if ($direction == "right"){
-    
-    }@else if ($direction == "left"){
-    
+@mixin triangle($direction , $color ) {
+    $position: relative;
+    $size: 0.5rem;
+
+    @if ($direction =="down") {
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-top : 16px solid $color;
+        border-right : 9px solid transparent;
+        border-left : 7px solid transparent;
     }
-}
+
+    @else if ($direction =="up") {
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-right: 7px solid transparent;
+        border-bottom: 16px solid $color;
+        border-left: 9px solid transparent;
+    }
+
+    @else if ($direction =="right") {
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-top : 7px solid transparent;
+        border-bottom : 9px solid transparent;
+        border-left : 16px solid $color;
+        }
+
+        @else if ($direction =="left") {
+            display: inline-block;
+            height: 0;
+            width: 0;
+            border-top : 9px solid transparent;
+ border-right : 16px solid $color;
+ border-bottom : 7px solid transparent;
+        }
+    }

@@ -79,10 +79,18 @@ body{
                 font-size: smaller;
             }
             button {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 50%;
                 @include text-black-white;
+                padding:0.5rem 0.3rem;
                 font-family:"myJournalFont";
                 float: right;
-                border: 0.5rem solid grey;
+                border-radius: 0.5rem;
+                #triangle{
+                    @include triangle("down",green);
+                }
             }
             .clear {
                 clear: both;
@@ -100,6 +108,20 @@ body{
 }
 @media (max-width:560px){
     body {
-        
+        #title-flex{
+            h1{
+                font-size: 1.2rem;
+            }
+            h2{
+                font-size: 1rem;
+            }
+            h4{
+                margin: 0;
+            }
+        }
+        .container{
+            flex-direction: column;
+            margin: 0 10% ;
+        }
     }
 }

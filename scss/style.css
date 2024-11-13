@@ -86,12 +86,25 @@ body .container .card p {
   font-size: smaller;
 }
 body .container .card button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
   background-color: black;
   color: white;
   padding: 0 1rem;
+  padding: 0.5rem 0.3rem;
   font-family: "myJournalFont";
   float: right;
-  border: 0.5rem solid grey;
+  border-radius: 0.5rem;
+}
+body .container .card button #triangle {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 16px solid green;
+  border-right: 9px solid transparent;
+  border-left: 7px solid transparent;
 }
 body .container .card .clear {
   clear: both;
@@ -102,4 +115,20 @@ body hr + span {
   color: white;
   padding: 0 1rem;
   font-family: "myJournalFont";
+}
+
+@media (max-width: 560px) {
+  body #title-flex h1 {
+    font-size: 1.2rem;
+  }
+  body #title-flex h2 {
+    font-size: 1rem;
+  }
+  body #title-flex h4 {
+    margin: 0;
+  }
+  body .container {
+    flex-direction: column;
+    margin: 0 10%;
+  }
 }/*# sourceMappingURL=style.css.map */
